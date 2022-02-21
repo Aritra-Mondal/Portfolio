@@ -4,31 +4,9 @@ import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
 import "./About.scss";
-import { images } from "../../constants";
-import { useState, useEffect } from "react";
 
-const abouts = [
-  {
-    title: "web Development",
-    description: "I am a good developer",
-    imgUrl: images.about04,
-  },
-  {
-    title: "ui/ux",
-    description: "I am a good developer",
-    imgUrl: images.about01,
-  },
-  {
-    title: "backend",
-    description: "I am a good developer",
-    imgUrl: images.about02,
-  },
-  {
-    title: "database",
-    description: "I am a good developer",
-    imgUrl: images.about03,
-  },
-];
+import { AppWrap } from "../../wrapper";
+import { useState, useEffect } from "react";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -70,4 +48,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, "about");
