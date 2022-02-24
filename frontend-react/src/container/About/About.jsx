@@ -5,7 +5,7 @@ import { urlFor, client } from "../../client";
 
 import "./About.scss";
 
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { useState, useEffect } from "react";
 
 const About = () => {
@@ -48,4 +48,8 @@ const About = () => {
   );
 };
 
-export default AppWrap(About, "about");
+export default AppWrap(
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
+);
