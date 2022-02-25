@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
-import "./Work.scss";
+import "./Project.scss";
 
-const Work = () => {
+const Project = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
@@ -43,19 +43,24 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {[
+          "ML Projects",
+          "Fullstack Web Apps",
+          "Website Templates",
+          "Django",
+          "React JS",
+          "All",
+        ].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
 
       <motion.div
@@ -118,7 +123,7 @@ const Work = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Work, "app__works"),
-  "work",
+  MotionWrap(Project, "app__works"),
+  "project",
   "app__primarybg"
 );

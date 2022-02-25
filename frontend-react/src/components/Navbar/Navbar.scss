@@ -5,7 +5,7 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.541);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
@@ -14,23 +14,50 @@
   z-index: 2;
 }
 
+.resume {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px rgb(255, 94, 0);
+  padding: 5px;
+  color: red;
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: red;
+    color: white;
+  }
+}
+
 .app__navbar-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
-  h2 {
+  h1 {
     font-family: Cursive;
-    color: rgb(3, 21, 184);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 0 0 2px #1b3dffe7;
+
+    @media screen and (max-width: 800px) {
+      font-size: 20px;
+    }
   }
 
   img {
-    width: 90px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
 
     @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
     }
   }
 }
